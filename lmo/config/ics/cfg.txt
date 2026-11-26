@@ -1,0 +1,4 @@
+dauer=120
+erinnerung=0
+url=
+kuerzen=
