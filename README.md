@@ -28,9 +28,7 @@ Bestehende Ligen haben den Link zunächst **aus**; der Administrator schaltet ih
 
 ## Hilfeseite
 
-Im Ordner `help/` liegt eine Hilfeseite **„ICS-Kalender"** (Deutsch, English, Español, Français, Nederlands): Was ist der Unterschied zwischen Download und Abo, und wie wird der `webcal://`-Link in Google Kalender, Apple Kalender (iPhone/Mac), Outlook, Thunderbird, Android (ICSx⁵) und weiteren Programmen eingebunden. Die ICS-Seite verlinkt sie direkt unter dem Abo-Link („Hilfe: Kalender abonnieren …"), sobald `help/pages/de/addons/ics.md` vorhanden ist.
-
-Für den Eintrag im Hilfe-Menü überschreibt das Paket `help/index.html`, `help/assets/js/app.js` und `help/pages/<Sprache>/addons.md` (je eine zusätzliche Zeile); neu sind `help/pages/<Sprache>/addons/ics.md`.
+Die Hilfeseite **„ICS-Kalender"** (Deutsch, English, Español, Français, Nederlands) ist Teil der Hilfe des aktuellen LMO und wird mit dem LMO ausgeliefert: Was ist der Unterschied zwischen Download und Abo, und wie wird der `webcal://`-Link in Google Kalender, Apple Kalender (iPhone/Mac), Outlook, Thunderbird, Android (ICSx⁵) und weiteren Programmen eingebunden. Die ICS-Seite verlinkt sie direkt unter dem Abo-Link („Hilfe: Kalender abonnieren …"), sobald `help/pages/de/addons/ics.md` im LMO vorhanden ist. Dieses Addon enthält daher keine Hilfedateien.
 
 ## Aufruf
 
