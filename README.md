@@ -24,7 +24,7 @@ Zusätzlich zum Addon enthält das Paket fünf **geänderte LMO-Dateien** (im Ha
 | `lmo-adminnew.php` | neue Ligen: ICS-Link standardmäßig an |
 | `lmo-showtable.php` | zeigt hinter jedem Team der Tabelle ein Kalender-Symbol, das direkt zur ICS-Seite des Teams führt |
 
-Bestehende Ligen haben den Link zunächst **aus**; der Administrator schaltet ihn je Liga ein. Ohne installiertes Addon ändert sich nichts an der Anzeige. Die Texte dazu stehen in `lang/ics/` (Nummern 022–024).
+Bestehende Ligen haben den Link zunächst **aus**; der Administrator schaltet ihn je Liga ein. Ohne installiertes Addon ändert sich nichts an der Anzeige. Die Texte dazu stehen in `lang/ics/` (Nummern 022–024; 025 und 026 gehören zur ICS-Seite).
 
 ## Hilfeseite
 
