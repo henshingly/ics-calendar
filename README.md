@@ -9,22 +9,26 @@ Das Addon erzeugt aus einer LMO-Liga eine **ICS-Kalenderdatei** (Liga wählen �
 | `addon/ics/lmo-ics.php` | das Addon |
 | `lang/ics/lang-<Sprache>.txt` | Texte in 14 LMO-Sprachen (`$text['ics'][n]`-Schema, Nummern 000–026) |
 | `config/ics/cfg.txt` | Einstellungen (optional, Standardwerte sind eingebaut) |
+| `img/ics.svg` | Kalender-Symbol für den Link in der Tabelle |
 
-Entpacke das Paket in das LMO-Hauptverzeichnis (die Ordner `addon/`, `lang/`, `config/` werden ergänzt).
+Entpacke das Paket in das LMO-Hauptverzeichnis (die Ordner `addon/`, `lang/`, `config/` und `img/` werden ergänzt).
 
-## Link in der Tabelle und Schalter pro Liga (geänderte LMO-Dateien)
+## Link in der Tabelle und Schalter pro Liga
 
-Zusätzlich zum Addon enthält das Paket fünf **geänderte LMO-Dateien** (im Hauptverzeichnis) und das Symbol `img/ics.svg`. Sie überschreiben die gleichnamigen Dateien des LMO; die Änderungen stehen in `AENDERUNGEN_LMO-Dateien.patch`:
+Der aktuelle LMO (lmo_php8, ab Commit `26317f7`) bringt die nötigen Anbindungen bereits mit und aktiviert sie automatisch, sobald `addon/ics/lmo-ics.php` vorhanden ist. Dieses Paket enthält deshalb **keine geänderten LMO-Dateien** mehr, sondern nur das Addon, die Texte, die Einstellungen und das Symbol `img/ics.svg`.
 
-| Datei | Änderung |
+| Was | Wo |
 |---|---|
-| `lmo-openfile.php` | liest die neue Liga-Option `icsT` (Standard 0 = aus) |
-| `lmo-savefile.php` | schreibt `icsT` in die Ligadatei |
-| `lmo-adminbasic.php` | Kontrollkästchen **„ICS-Kalender verlinken"** unter *Grundeinstellungen → Anzeigen/Darstellung → Verlinkungen* (nur sichtbar, wenn das Addon installiert ist) |
-| `lmo-adminnew.php` | neue Ligen: ICS-Link standardmäßig an |
-| `lmo-showtable.php` | zeigt hinter jedem Team der Tabelle ein Kalender-Symbol, das direkt zur ICS-Seite des Teams führt |
+| Kalender-Symbol hinter jedem Team der Tabelle | `lmo-showtable.php` (nur wenn das Addon vorhanden und die Liga-Option an ist) |
+| Kontrollkästchen **„ICS-Kalender verlinken"** | *Grundeinstellungen → Anzeigen/Darstellung → Verlinkungen* (nur sichtbar, wenn das Addon installiert ist) |
+| Liga-Option `icsT` (0 = aus, 1 = an) | wird von `lmo-openfile.php` / `lmo-savefile.php` immer gelesen und geschrieben |
+| neue Ligen | ICS-Link standardmäßig an (`lmo-adminnew.php`) |
 
 Bestehende Ligen haben den Link zunächst **aus**; der Administrator schaltet ihn je Liga ein. Ohne installiertes Addon ändert sich nichts an der Anzeige. Die Texte dazu stehen in `lang/ics/` (Nummern 022–024; 025 und 026 gehören zur ICS-Seite).
+
+**Ältere LMO-Versionen:** Ohne diese Anbindungen funktioniert die ICS-Seite weiterhin, aber es gibt keinen Link in der Tabelle und keinen Schalter. Für ältere Stände liegt im Repository (nicht im Release-Paket) die Datei `AENDERUNGEN_LMO-Dateien.patch` mit den Änderungen an `lmo-openfile.php`, `lmo-savefile.php`, `lmo-adminbasic.php`, `lmo-adminnew.php` und `lmo-showtable.php`.
+
+**Achtung bei Updates:** Das Paket enthält keine LMO-Dateien. Der Release 1.1 enthält dagegen die fünf geänderten Dateien; wer ihn über einen neueren LMO legt, überschreibt die Anbindungen im Kern wieder.
 
 ## Hilfeseite
 
